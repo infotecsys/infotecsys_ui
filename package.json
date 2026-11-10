@@ -1,0 +1,14 @@
+{
+  "name": "infotecsys-ui",
+  "version": "2.0.0",
+  "description": "Infotecsys Modern Technology Company & SaaS Products UI",
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --minify",
+    "watch:css": "npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --watch",
+    "serve": "npx serve ."
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.4",
+    "tailwindcss": "^4.3.4"
+  }
+}

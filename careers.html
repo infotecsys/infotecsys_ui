@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Careers &amp; Culture | Neptune Sector 08 • Infotecsys Technologies</title>
+  <meta name="description" content="Join Infotecsys Technologies engineering crew: High-trust distributed systems, remote-first culture, Go, TypeScript, Python, Flutter, and PostgreSQL. Explore open engineering roles.">
+  <link rel="icon" type="image/png" href="./assets/images/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- High-Performance Preload & Resource Hints -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="modulepreload" href="./js/main.js">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/output.css?v=solar-system-1.0">
+  <link rel="stylesheet" href="./css/custom.css?v=solar-system-1.0">
+</head>
+<body class="bg-[#060a17] text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-blue-500 selection:text-white celestial-bg theme-neptune">
+
+  <!-- Celestial Planetary Background Atmosphere (Theme: Neptune) -->
+  <div class="celestial-horizon-backdrop pointer-events-none" aria-hidden="true">
+    <div class="celestial-nebula-glow"></div>
+    <div class="celestial-horizon-arc"></div>
+    <div class="celestial-stardust"></div>
+  </div>
+
+  <!-- ========================================================
+       TOP ANNOUNCEMENT / STATUS BAR (UNIFIED WITH INDEX)
+  ======================================================== -->
+  <header id="main-header" class="sticky top-0 z-40 transition-all duration-300 py-4 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Brand Logo -->
+        <a href="index.html#hero" class="flex items-center gap-3 group">
+          <div class="relative flex items-center justify-center">
+            <img src="./assets/images/logo.png" alt="Infotecsys Logo" class="brand-logo-img w-10 h-10 object-contain drop-shadow-[0_0_14px_rgba(59,130,246,0.6)] group-hover:scale-105 transition-transform duration-300" decoding="async" fetchpriority="high" width="40" height="40">
+          </div>
+          <div>
+            <div class="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-white flex items-center gap-1.5">
+              INFOTECSYS
+              <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+            </div>
+            <div class="text-[9px] uppercase tracking-widest text-slate-400 font-semibold">Software &amp; SaaS Solutions</div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+          
+          <!-- Solutions Dropdown -->
+          <div class="relative group">
+            <button data-mega-trigger="mega-solutions" class="flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-lg hover:bg-slate-800/40 transition-colors">
+              Solutions
+              <svg class="w-4 h-4 text-slate-400 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            
+            <div id="mega-solutions" class="mega-dropdown hidden absolute top-full left-0 w-[560px] mt-2 p-4 rounded-2xl bg-[#0b1226] border border-slate-800 shadow-2xl shadow-slate-950/80 transition-all">
+              <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 mb-3">Industry-Specific Solutions</div>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="solutions.html#solution-finder-section" class="p-3 rounded-xl hover:bg-slate-800/60 transition-colors flex items-start gap-3 group">
+                  <div class="w-9 h-9 rounded-xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center shrink-0 text-blue-400 group-hover:scale-110 group-hover:border-blue-400 transition-all">
+                    <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="font-semibold text-white text-sm group-hover:text-cyan-300 transition-colors">School &amp; Academics</div>
+                    <div class="text-xs text-slate-400 mt-0.5 leading-snug">Fee recovery, RFID attendance &amp; parent apps</div>
+                  </div>
+                </a>
+                <a href="solutions.html#solution-finder-section" class="p-3 rounded-xl hover:bg-slate-800/60 transition-colors flex items-start gap-3 group">
+                  <div class="w-9 h-9 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center shrink-0 text-emerald-400 group-hover:scale-110 group-hover:border-emerald-400 transition-all">
+                    <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="18" height="18" x="3" y="3" rx="4"/>
+                      <path d="M12 8v8M8 12h8"/>
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="font-semibold text-white text-sm group-hover:text-emerald-300 transition-colors">Hospital &amp; Healthcare</div>
+                    <div class="text-xs text-slate-400 mt-0.5 leading-snug">NABH billing, IPD/OPD, EMR &amp; pharmacy</div>
+                  </div>
+                </a>
+                <a href="solutions.html#solution-finder-section" class="p-3 rounded-xl hover:bg-slate-800/60 transition-colors flex items-start gap-3 group">
+                  <div class="w-9 h-9 rounded-xl bg-pink-500/15 border border-pink-500/30 flex items-center justify-center shrink-0 text-pink-400 group-hover:scale-110 group-hover:border-pink-400 transition-all">
+                    <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="6" cy="6" r="3"/>
+                      <circle cx="6" cy="18" r="3"/>
+                      <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+                      <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="font-semibold text-white text-sm group-hover:text-pink-300 transition-colors">Salon &amp; Day Spa</div>
+                    <div class="text-xs text-slate-400 mt-0.5 leading-snug">Stylist commission, bookings &amp; loyalty</div>
+                  </div>
+                </a>
+                <a href="solutions.html#solution-finder-section" class="p-3 rounded-xl hover:bg-slate-800/60 transition-colors flex items-start gap-3 group">
+                  <div class="w-9 h-9 rounded-xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center shrink-0 text-cyan-400 group-hover:scale-110 group-hover:border-cyan-400 transition-all">
+                    <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                      <line x1="12" y1="22.08" x2="12" y2="12"/>
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="font-semibold text-white text-sm group-hover:text-cyan-300 transition-colors">GST Billing &amp; Inventory</div>
+                    <div class="text-xs text-slate-400 mt-0.5 leading-snug">E-Way bills, multi-location stock &amp; POS</div>
+                  </div>
+                </a>
+                <a href="solutions.html#solution-finder-section" class="col-span-2 p-3 rounded-xl hover:bg-slate-800/60 transition-colors flex items-start gap-3 group">
+                  <div class="w-9 h-9 rounded-xl bg-violet-500/15 border border-violet-500/30 flex items-center justify-center shrink-0 text-violet-400 group-hover:scale-110 group-hover:border-violet-400 transition-all">
+                    <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9h1M9 13h1M9 17h1M15 13h1M15 17h1"/>
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="font-semibold text-white text-sm group-hover:text-violet-300 transition-colors">Hostel &amp; Co-Living PMS</div>
+                    <div class="text-xs text-slate-400 mt-0.5 leading-snug">Bed matrix, digital tenant KYC, utility meters &amp; auto UPI rent links</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Products Link -->
+          <a href="products.html" class="px-3.5 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-lg hover:bg-slate-800/40 transition-colors whitespace-nowrap">
+            Products
+          </a>
+
+          <!-- Services Link -->
+          <a href="services.html" class="px-3.5 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-lg hover:bg-slate-800/40 transition-colors whitespace-nowrap">
+            Services
+          </a>
+
+          <!-- Contact Link -->
+          <a href="contact.html" class="px-3.5 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-lg hover:bg-slate-800/40 transition-colors flex items-center gap-1.5 whitespace-nowrap">
+            <span>Contact</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+          </a>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="flex items-center gap-2 sm:gap-2.5">
+          <!-- Dark / Light Mode Switcher Button -->
+          <button data-theme-toggle class="theme-toggle-btn p-2 sm:px-2.5 sm:py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 hover:text-white border border-slate-700/80 hover:border-cyan-500/40 transition-all flex items-center justify-center group" aria-label="Switch to Light Mode" title="Toggle Dark/Light Mode">
+            <svg class="theme-sun-icon w-4 h-4 text-amber-400 group-hover:rotate-45 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg class="theme-moon-icon hidden w-4 h-4 text-cyan-400 group-hover:-rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          </button>
+
+          <!-- Interactive Animation / Motion Toggle Button -->
+          <button data-motion-toggle class="motion-toggle-btn p-2 sm:px-2.5 sm:py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 hover:text-white border border-slate-700/80 hover:border-cyan-500/40 transition-all flex items-center justify-center group" aria-label="Interactive Animations: Active (Click to Turn OFF)" title="Animations: ON (Click to disable pointer &amp; scroll effects)">
+            <span class="motion-icon-on flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-blue-400 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_#10b981]"></span>
+            </span>
+            <span class="motion-icon-off hidden items-center gap-1.5">
+              <svg class="w-4 h-4 text-slate-400 group-hover:scale-105 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>
+            </span>
+          </button>
+
+          <button onclick="window.openBookingModal ? window.openBookingModal('Career Inquiry') : (window.location.href='contact.html')" class="hidden md:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700/80 transition-all">
+            Join The Crew
+          </button>
+          
+          <button onclick="window.openBookingModal ? window.openBookingModal('Custom Project Quote') : (window.location.href='contact.html')" class="btn-primary-cta relative group overflow-hidden hidden sm:inline-flex px-4 sm:px-5 py-2 text-xs font-bold rounded-xl active:scale-[0.98] transition-all">
+            <span class="relative z-10 flex items-center gap-1.5">
+              Start a Project
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </span>
+          </button>
+
+          <!-- Sidebar Drawer Toggle -->
+          <button id="mobile-menu-toggle" aria-label="Open sidebar menu" class="flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-800/80 text-slate-200 hover:text-white border border-slate-700/80 hover:border-cyan-500/40 transition-all group">
+            <svg class="w-5 h-5 text-blue-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+            <span class="hidden sm:inline text-xs font-semibold">Menu</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       SIDEBAR SLIDE-OUT DRAWER (UNIFIED ACROSS SITE)
+  ======================================================== -->
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <aside id="mobile-drawer" class="fixed top-0 right-0 z-50 w-full max-w-sm h-full bg-[#0b1226] border-l border-slate-800/90 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 overflow-y-auto shadow-2xl">
+    <div class="space-y-6">
+      <div class="flex items-center justify-between pb-5 border-b border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <img src="./assets/images/logo.png" alt="Infotecsys Logo" class="brand-logo-img w-8 h-8 object-contain drop-shadow-[0_0_10px_rgba(59,130,246,0.6)]" decoding="async">
+          <div>
+            <div class="font-heading font-extrabold text-base text-white">INFOTECSYS</div>
+            <div class="text-[9px] uppercase tracking-widest text-slate-400 font-semibold">Software Navigation</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="close-mobile-drawer" aria-label="Close menu" class="p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <nav class="space-y-4">
+        <div>
+          <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2.5 px-2">Core Directory</div>
+          <div class="space-y-1">
+            <a href="index.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-200 hover:bg-slate-800 hover:text-white transition-colors">
+              <span>🏠 Main Solar System</span>
+              <span class="text-[10px] text-amber-400 font-mono">Sun &rarr;</span>
+            </a>
+            <a href="about.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-200 hover:bg-slate-800 hover:text-white transition-colors">
+              <span>☿ About &amp; Architecture (Mercury)</span>
+              <span class="text-[10px] text-orange-400 font-mono">VS Code &rarr;</span>
+            </a>
+            <a href="products.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-200 hover:bg-slate-800 hover:text-white transition-colors">
+              <span>♀ 5 Flagship SaaS Suites (Venus)</span>
+              <span class="text-[10px] text-amber-300 font-mono">5 Suites &rarr;</span>
+            </a>
+            <a href="solutions.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-200 hover:bg-slate-800 hover:text-white transition-colors">
+              <span>🌍 Industry Solutions (Earth)</span>
+              <span class="text-[10px] text-emerald-400 font-mono">Raycast &rarr;</span>
+            </a>
+            <a href="services.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-200 hover:bg-slate-800 hover:text-white transition-colors">
+              <span>♂ Cloud Engineering Forge (Mars)</span>
+              <span class="text-[10px] text-rose-400 font-mono">Forge &rarr;</span>
+            </a>
+            <a href="what-we-do.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-200 hover:bg-slate-800 hover:text-white transition-colors">
+              <span>♃ What We Do (Jupiter)</span>
+              <span class="text-[10px] text-amber-400 font-mono">SDLC &rarr;</span>
+            </a>
+            <a href="delivered-projects.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-200 hover:bg-slate-800 hover:text-white transition-colors">
+              <span>♄ 120+ Deployments (Saturn)</span>
+              <span class="text-[10px] text-yellow-400 font-mono">Demos &rarr;</span>
+            </a>
+            <a href="blog.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-200 hover:bg-slate-800 hover:text-white transition-colors">
+              <span>♅ Engineering Journal (Uranus)</span>
+              <span class="text-[10px] text-cyan-400 font-mono">Insights &rarr;</span>
+            </a>
+            <a href="careers.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold text-emerald-300 bg-emerald-950/40 border border-emerald-800/60 transition-colors">
+              <span>♆ Engineering Careers (Neptune)</span>
+              <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono">4 Open</span>
+            </a>
+            <a href="contact.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-cyan-300 bg-cyan-950/30 border border-cyan-900/50 hover:bg-cyan-900/40 transition-colors">
+              <span>📇 Executive Contact &amp; Card (Pluto)</span>
+              <span class="text-[10px] text-cyan-400 font-mono">Connect &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-slate-800 space-y-3">
+      <button onclick="window.openBookingModal ? (window.openBookingModal(), document.getElementById('close-mobile-drawer').click()) : (window.location.href='contact.html')" class="btn-primary-cta w-full py-3 px-4 rounded-xl font-bold text-xs active:scale-[0.98] transition-all">
+        Start a Project ↗
+      </button>
+      <div class="text-center text-[11px] text-slate-400">
+        info@infotecsys.com &bull; Maharashtra, India &bull; Global Delivery
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================
+       MAIN PAGE CONTENT
+  ======================================================== -->
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    
+    <!-- Planetary Sector 08: Neptune Telemetry HUD -->
+    <div class="planet-telemetry-hud rounded-3xl p-6 sm:p-10 border border-blue-500/30 mb-16 relative overflow-hidden bg-gradient-to-br from-blue-950/20 via-slate-900/60 to-slate-950/90 shadow-2xl">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+        
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-300 text-xs font-mono font-bold uppercase tracking-wider mb-4">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            PLANETARY SECTOR 08 // NEPTUNE • OCEAN OF TALENT &amp; EXPEDITION
+          </div>
+          <h1 class="font-heading font-black text-3xl sm:text-5xl text-white tracking-tight leading-tight">
+            Build The Future Of Enterprise SaaS. <span class="bg-gradient-to-r from-blue-400 via-cyan-300 to-emerald-400 bg-clip-text text-transparent">Join The Infotecsys Crew</span>.
+          </h1>
+          <p class="mt-4 text-base text-slate-300 leading-relaxed">
+            The deep azure voyager planet of high-trust technical exploration. We build distributed systems, schema-isolated cloud platforms, and 60 FPS mobile apps. We hire exceptional software architects who value high autonomy, clean craftsmanship, and zero corporate bureaucracy.
+          </p>
+          
+          <div class="mt-6 flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800">ORBIT: 164.8 YEARS</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800">DISTANCE: 30.07 AU</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-emerald-500/40 text-emerald-300 font-semibold">ROLES: 4 POSITIONS OPEN</span>
+          </div>
+        </div>
+
+        <!-- Talent Deck & Open Roles Panel -->
+        <div class="w-full lg:w-96 shrink-0 hero-telemetry-panel rounded-2xl p-5 border border-blue-500/30 bg-slate-900/80 relative shadow-xl">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-700/60">
+            <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-blue-300 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
+              Talent Deck &amp; Open Roles
+            </span>
+            <span class="text-[10px] font-mono text-emerald-300 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/80">
+              ♆ Sector 08
+            </span>
+          </div>
+
+          <div class="space-y-2.5">
+            <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
+              <div>
+                <div class="text-xs font-semibold text-white">Sr. Full-Stack Architect</div>
+                <div class="text-[10px] text-slate-400">Node.js, Go &amp; Distributed DBs</div>
+              </div>
+              <span class="text-[11px] font-mono font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/30">Remote</span>
+            </div>
+
+            <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
+              <div>
+                <div class="text-xs font-semibold text-white">Lead Flutter Mobile Dev</div>
+                <div class="text-[10px] text-slate-400">iOS &amp; Android Native Engine</div>
+              </div>
+              <span class="text-[11px] font-mono font-semibold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/30">Remote</span>
+            </div>
+
+            <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
+              <div>
+                <div class="text-xs font-semibold text-white">AI Systems &amp; RAG Engineer</div>
+                <div class="text-[10px] text-slate-400">LLM Tool Calling &amp; Vector DBs</div>
+              </div>
+              <span class="text-[11px] font-mono font-semibold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/30">Hybrid</span>
+            </div>
+
+            <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between">
+              <div>
+                <div class="text-xs font-semibold text-white">Sr. Product UI/UX Designer</div>
+                <div class="text-[10px] text-slate-400">Enterprise Design Systems &amp; SaaS</div>
+              </div>
+              <span class="text-[11px] font-mono font-semibold text-violet-400 bg-violet-500/10 px-2 py-0.5 rounded border border-violet-500/30">Remote</span>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-400">
+            <span class="flex items-center gap-1.5 text-emerald-400">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              High-Trust Culture Active
+            </span>
+            <span class="text-slate-400">Global Applicants</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ========================================================
+         IDE-THEMED ENGINEERING MANIFESTO & CULTURE BOARD
+    ======================================================== -->
+    <section class="mb-20">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-300 text-xs font-mono font-bold uppercase tracking-wider mb-3">
+          ● ENGINEERING FIRST &bull; ZERO BUREAUCRACY
+        </span>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl text-white tracking-tight">
+          How Engineers Work At Infotecsys
+        </h2>
+        <p class="mt-3 text-sm text-slate-300">
+          We treat engineers as autonomous problem solvers, not ticket-taking cogs. Here is what you can expect when you join our crew.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-blue-500/30 bg-slate-950/60">
+          <div class="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-400 border border-blue-500/30 flex items-center justify-center text-xl mb-4 font-bold">
+            ⚡
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">High Ownership &amp; Autonomy</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            No middle management layers or endless standup ceremonies. You own feature architecture from database schema to cloud deployment with full creative control.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-emerald-500/30 bg-slate-950/60">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-xl mb-4 font-bold">
+            🌍
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Remote-First Flexibility</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Work asynchronously from anywhere in India or across the globe. We evaluate engineers on output, code elegance, and system reliability, not chair time.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-cyan-500/30 bg-slate-950/60">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center text-xl mb-4 font-bold">
+            📚
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white mb-2">Uncapped Growth &amp; Hardware</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Latest M-series MacBook Pros or Linux dev machines, high-speed fiber internet reimbursement, conference passes, and unlimited technical book allowances.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         4 DETAILED OPEN POSITIONS BOARD
+    ======================================================== -->
+    <section class="mb-20">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold uppercase tracking-wider mb-3">
+          ● OPEN POSITIONS • Q1 2026 COHORT
+        </span>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl text-white tracking-tight">
+          Current Engineering Expeditions
+        </h2>
+        <p class="mt-3 text-sm text-slate-300">
+          Click any role to review technical qualifications, stack expectations, and submit your direct application.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        
+        <!-- Role 1: Full-Stack Architect -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-blue-500/30 shadow-xl bg-slate-950/80 hover:border-blue-500/60 transition-all">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+            <div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-blue-500/20 text-blue-300 border border-blue-500/40">ROLE 01</span>
+                <span class="text-xs font-mono text-emerald-400 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Remote (India / Global)</span>
+              </div>
+              <h3 class="font-heading font-bold text-xl sm:text-2xl text-white mt-2">
+                Lead Full-Stack Cloud Architect (Distributed Systems)
+              </h3>
+              <p class="text-xs text-slate-400 mt-1 font-mono">Team: Core Cloud Platform Forge &bull; Full-Time</p>
+            </div>
+            <button onclick="window.openBookingModal ? window.openBookingModal('Apply: Lead Cloud Architect') : null" class="btn-primary-cta py-2 px-5 rounded-xl text-xs font-bold">
+              Apply For Role ↗
+            </button>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            Architect and scale our multi-tenant SaaS engines. You will lead database schema isolation in PostgreSQL 16, design gRPC service contracts, and optimize sub-15ms query execution under 50,000 req/sec loads.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 text-xs font-mono text-slate-400 pt-2 border-t border-slate-800">
+            <span class="text-slate-500">Requirements:</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">5+ Yrs Go/Node.js</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">PostgreSQL Schema Sharding</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Docker &bull; Kubernetes</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Redis Streams</span>
+          </div>
+        </div>
+
+        <!-- Role 2: Flutter Mobile Engineer -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-cyan-500/30 shadow-xl bg-slate-950/80 hover:border-cyan-500/60 transition-all">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+            <div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">ROLE 02</span>
+                <span class="text-xs font-mono text-emerald-400 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Remote (India / Global)</span>
+              </div>
+              <h3 class="font-heading font-bold text-xl sm:text-2xl text-white mt-2">
+                Senior Flutter Mobile Engineer (60 FPS Native)
+              </h3>
+              <p class="text-xs text-slate-400 mt-1 font-mono">Team: Mobile Systems &bull; Full-Time</p>
+            </div>
+            <button onclick="window.openBookingModal ? window.openBookingModal('Apply: Senior Flutter Engineer') : null" class="btn-primary-cta py-2 px-5 rounded-xl text-xs font-bold">
+              Apply For Role ↗
+            </button>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            Own the cross-platform mobile experiences for our school parent apps, hospital doctor pads, and co-living tenant dashboards. Build custom rendering state machines, offline SQLite sync, and biometric authentication.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 text-xs font-mono text-slate-400 pt-2 border-t border-slate-800">
+            <span class="text-slate-500">Requirements:</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">4+ Yrs Flutter / Dart</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Offline SQLite Sync</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Bloc / Riverpod</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">iOS &amp; Android Native Bridges</span>
+          </div>
+        </div>
+
+        <!-- Role 3: AI & RAG Engineer -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-purple-500/30 shadow-xl bg-slate-950/80 hover:border-purple-500/60 transition-all">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+            <div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-purple-500/20 text-purple-300 border border-purple-500/40">ROLE 03</span>
+                <span class="text-xs font-mono text-blue-400 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Hybrid / Remote</span>
+              </div>
+              <h3 class="font-heading font-bold text-xl sm:text-2xl text-white mt-2">
+                AI Systems &amp; Autonomous Agent Engineer
+              </h3>
+              <p class="text-xs text-slate-400 mt-1 font-mono">Team: Autonomous Systems &bull; Full-Time</p>
+            </div>
+            <button onclick="window.openBookingModal ? window.openBookingModal('Apply: AI Systems Engineer') : null" class="btn-primary-cta py-2 px-5 rounded-xl text-xs font-bold">
+              Apply For Role ↗
+            </button>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            Build deterministic LLM agentic pipelines that trigger real ERP function calls without hallucinations. Implement multimodal document OCR ingestion, WhatsApp Business API bots, and vector database embeddings.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 text-xs font-mono text-slate-400 pt-2 border-t border-slate-800">
+            <span class="text-slate-500">Requirements:</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">3+ Yrs Python &amp; FastAPI</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">LangChain / LlamaIndex</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">PGVector &bull; Embeddings</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Function Calling Guardrails</span>
+          </div>
+        </div>
+
+        <!-- Role 4: Senior UI/UX Designer -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-pink-500/30 shadow-xl bg-slate-950/80 hover:border-pink-500/60 transition-all">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+            <div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-pink-500/20 text-pink-300 border border-pink-500/40">ROLE 04</span>
+                <span class="text-xs font-mono text-emerald-400 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Remote (India / Global)</span>
+              </div>
+              <h3 class="font-heading font-bold text-xl sm:text-2xl text-white mt-2">
+                Senior Enterprise Product UI/UX Designer
+              </h3>
+              <p class="text-xs text-slate-400 mt-1 font-mono">Team: Design Systems &bull; Full-Time</p>
+            </div>
+            <button onclick="window.openBookingModal ? window.openBookingModal('Apply: Senior UI/UX Designer') : null" class="btn-primary-cta py-2 px-5 rounded-xl text-xs font-bold">
+              Apply For Role ↗
+            </button>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            Define the next generation of enterprise SaaS interfaces. Create clean, dense, high-utility dashboards, data grids, and keyboard-first command palettes in Figma and code-ready Tailwind tokens.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 text-xs font-mono text-slate-400 pt-2 border-t border-slate-800">
+            <span class="text-slate-500">Requirements:</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">4+ Yrs Complex SaaS UX</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Figma Design Systems</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Tailwind CSS &bull; HTML/CSS</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">WCAG Accessibility</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CONVERSION CALL TO ACTION CARD
+    ======================================================== -->
+    <div class="text-center py-12 px-6 sm:px-12 rounded-3xl bg-gradient-to-r from-blue-950/40 via-slate-900/90 to-emerald-950/40 border border-blue-500/30 shadow-2xl relative overflow-hidden">
+      <h3 class="font-heading font-black text-2xl sm:text-4xl text-white mb-3">
+        Don't See Your Exact Role Listed?
+      </h3>
+      <p class="text-sm text-slate-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+        We are always looking for exceptional software architects, compiler enthusiasts, and distributed systems hackers. Send us your GitHub profile and tell us what you love building.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <button onclick="window.openBookingModal ? window.openBookingModal('General Engineering Application') : (window.location.href='contact.html')" class="btn-primary-cta py-3.5 px-8 rounded-xl font-bold text-xs">
+          Submit General Engineering Pitch ↗
+        </button>
+        <a href="about.html" class="px-6 py-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 border border-slate-700 text-xs font-semibold transition-colors">
+          Read Engineering Manifesto (Mercury) &rarr;
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ========================================================
+       MODERN ENTERPRISE FOOTER 2.0 (STANDARDIZED WITH BADGES)
+  ======================================================== -->
+  <footer id="footer" class="border-t border-slate-800/90 bg-[#040814]/95 pt-16 pb-12 text-slate-400 text-xs relative z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- 4 Pillars Navigation Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800/80">
+        
+        <!-- Col 1: Brand & Status -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="./assets/images/logo.png" alt="Infotecsys Logo" class="w-8 h-8 object-contain" decoding="async">
+            <div class="font-heading font-extrabold text-base text-white tracking-tight">
+              INFOTECSYS<span class="text-blue-400">.</span>
+            </div>
+          </div>
+          <p class="text-slate-400 leading-relaxed text-xs">
+            Next-generation software engineering, multi-tenant SaaS development, and enterprise industry ERP platforms. Helping ambitious businesses automate operations and scale with confidence.
+          </p>
+          <div class="pt-1">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-mono">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              All Cloud Clusters Operational &bull; 99.8% SLA
+            </span>
+          </div>
+
+          <!-- Social Badges Pill List -->
+          <div class="pt-2">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-2">Connect &amp; Follow</div>
+            <div class="flex flex-wrap items-center gap-2">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors" title="LinkedIn">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors" title="GitHub">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors" title="X (Twitter)">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" class="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors" title="WhatsApp">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors" title="YouTube">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors" title="Discord">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Software Products -->
+        <div class="space-y-3">
+          <div class="text-xs font-bold text-white uppercase tracking-wider font-heading flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            Software Products
+          </div>
+          <ul class="space-y-2 text-xs">
+            <li><a href="products.html" class="hover:text-amber-300 transition-colors">EduNova AI School ERP</a></li>
+            <li><a href="products.html" class="hover:text-amber-300 transition-colors">CarePulse Hospital HMS</a></li>
+            <li><a href="products.html" class="hover:text-amber-300 transition-colors">GlowSuite Salon POS</a></li>
+            <li><a href="products.html" class="hover:text-amber-300 transition-colors">Vyora GST Billing &amp; ERP</a></li>
+            <li><a href="products.html" class="hover:text-amber-300 transition-colors">NestDash PG &amp; Hostel PMS</a></li>
+            <li class="pt-2">
+              <a href="solutions.html" class="inline-flex items-center gap-1.5 text-emerald-400 font-semibold hover:underline">
+                <span>All 6 Industry Blueprints (Earth)</span>
+                <span>&rarr;</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Capabilities & IP -->
+        <div class="space-y-3">
+          <div class="text-xs font-bold text-white uppercase tracking-wider font-heading flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+            Capabilities &amp; IP
+          </div>
+          <ul class="space-y-2 text-xs">
+            <li><a href="services.html" class="hover:text-rose-300 transition-colors">Custom Software Forge (Mars)</a></li>
+            <li><a href="what-we-do.html" class="hover:text-rose-300 transition-colors">What We Do (Jupiter)</a></li>
+            <li><a href="delivered-projects.html" class="hover:text-rose-300 transition-colors">120+ Deployments (Saturn)</a></li>
+            <li><a href="blog.html" class="hover:text-rose-300 transition-colors">Engineering Journal (Uranus)</a></li>
+            <li><a href="careers.html" class="text-emerald-400 font-bold hover:underline flex items-center gap-2"><span>Careers (Neptune)</span> <span class="text-[9px] px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 font-mono">Hiring</span></a></li>
+            <li><a href="about.html" class="hover:text-rose-300 transition-colors">About Us &amp; IP (Mercury)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Global Desk & Badges -->
+        <div class="space-y-4">
+          <div class="text-xs font-bold text-white uppercase tracking-wider font-heading flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+            Global Desk &amp; Inquiries
+          </div>
+          <div class="space-y-1 text-xs">
+            <div class="text-slate-400 flex items-center gap-1.5">
+              <span>📧</span>
+              <span class="text-white font-mono">info@infotecsys.com</span>
+            </div>
+            <div class="text-slate-400 flex items-start gap-1.5 pt-1">
+              <span>🌐</span>
+              <span>Maharashtra (HQ), India &bull; USA &bull; UK &bull; UAE</span>
+            </div>
+          </div>
+          <div class="pt-2">
+            <a href="contact.html" class="inline-flex items-center gap-2 text-xs text-cyan-300 hover:text-cyan-200 font-semibold transition-colors">
+              <span>📇 Executive Visiting Card (Pluto)</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+          <div class="pt-2">
+            <button onclick="window.openBookingModal ? window.openBookingModal('General Engineering Consultation') : (window.location.href='contact.html')" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 text-xs font-bold transition-all text-center">
+              Schedule Architecture Demo ↗
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Badges & Copyright -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-[11px] text-slate-500">
+        
+        <div>
+          &copy; 2026 Infotecsys Technologies. All Rights Reserved.
+          <div class="text-slate-600 mt-0.5">Engineered for international enterprise scale, ISO &amp; NABH compliance, and zero vendor lock-in.</div>
+        </div>
+
+        <!-- Digital India & Make in India Trust Badges -->
+        <div class="flex items-center gap-4">
+          <a href="https://www.digitalindia.gov.in/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white flex items-center justify-center hover:scale-105 transition-transform duration-200 shadow-md shadow-white/5" title="Digital India Verified Initiative">
+            <img src="./assets/images/digital-india.png" alt="Digital India Logo" class="h-6 w-auto object-contain" loading="lazy" decoding="async" width="120" height="40">
+          </a>
+          <a href="https://www.makeinindia.com/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white flex items-center justify-center hover:scale-105 transition-transform duration-200 shadow-md shadow-white/5" title="Make in India Certified Technology">
+            <img src="./assets/images/make-in-india.png" alt="Make In India Logo" class="h-6 w-auto object-contain" loading="lazy" decoding="async" width="120" height="40">
+          </a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="flex items-center gap-4 text-slate-400">
+          <a href="#" class="hover:text-cyan-300 transition-colors">Privacy Policy</a>
+          <span class="text-slate-700 hidden sm:inline">&bull;</span>
+          <a href="#" class="hover:text-cyan-300 transition-colors">Terms of Service</a>
+          <span class="text-slate-700 hidden sm:inline">&bull;</span>
+          <a href="#" class="hover:text-cyan-300 transition-colors">Security Architecture</a>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       MODAL 1: CONSULTATION & LIVE PRODUCT DEMO BOOKING MODAL
+  ======================================================== -->
+  <div id="booking-modal-backdrop" class="fixed inset-0 z-50 modal-backdrop hidden opacity-0 transition-opacity duration-300"></div>
+  
+  <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6 hidden opacity-0 scale-95 transition-all duration-300">
+    <div class="w-full max-w-xl bg-[#0b1226] rounded-2xl sm:rounded-3xl border border-slate-700/80 shadow-2xl p-4 sm:p-6 md:p-8 relative max-h-[92vh] overflow-y-auto">
+      
+      <!-- Close Button -->
+      <button id="close-booking-modal" aria-label="Close modal" class="absolute top-5 right-5 p-2 rounded-xl bg-slate-800 text-slate-400 hover:text-white transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <!-- Form State -->
+      <div id="booking-form-state">
+        <div class="mb-6">
+          <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Engineering Career Application</span>
+          <h3 class="text-xl sm:text-2xl font-bold font-heading text-white mt-1">Submit Application / Project Pitch</h3>
+          <p class="text-xs text-slate-400 mt-1">Select your desired role or proposal and introduce your technical background.</p>
+        </div>
+
+        <form id="booking-form" class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Select Open Role</label>
+            <select id="booking-product-select" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 text-xs focus:border-emerald-500 focus:outline-none">
+              <option value="lead-architect">Lead Full-Stack Cloud Architect (Go/Node/DBs)</option>
+              <option value="flutter-eng">Senior Flutter Mobile Engineer (60 FPS Native)</option>
+              <option value="ai-systems">AI Systems &amp; Autonomous Agent Engineer</option>
+              <option value="ui-ux">Senior Enterprise Product UI/UX Designer</option>
+              <option value="general-pitch">General Engineering Pitch / Other Role</option>
+            </select>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name *</label>
+              <input type="text" id="booking-name" required placeholder="e.g. Priya Deshmukh" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 text-xs focus:border-emerald-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address *</label>
+              <input type="email" id="booking-email" required placeholder="priya@engineer.dev" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 text-xs focus:border-emerald-500 focus:outline-none">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Phone / WhatsApp Number *</label>
+              <input type="tel" id="booking-phone" required placeholder="+91 98765 43210" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 text-xs focus:border-emerald-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">GitHub / Portfolio URL</label>
+              <input type="url" id="booking-company" placeholder="https://github.com/yourhandle" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 text-xs focus:border-emerald-500 focus:outline-none">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Tell Us About A Technical Problem You Solved</label>
+            <textarea id="booking-notes" rows="3" placeholder="Describe a challenging distributed system, performance optimization, or architecture problem you tackled..." class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 text-xs focus:border-emerald-500 focus:outline-none resize-none"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary-cta w-full py-3.5 rounded-xl font-bold text-xs active:scale-[0.99] transition-all">
+            Submit Engineering Application &rarr;
+          </button>
+        </form>
+      </div>
+
+      <!-- Success State -->
+      <div id="booking-success-state" class="hidden text-center py-8 space-y-4">
+        <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto text-2xl font-bold">
+          ✓
+        </div>
+        <h3 class="text-2xl font-bold font-heading text-white">Application Received!</h3>
+        <p class="text-xs text-slate-300 max-w-sm mx-auto">
+          Thank you! Our engineering leadership team reviews every application thoroughly. If there is a mutual fit, we will reach out directly for a technical deep-dive conversation.
+        </p>
+        <button onclick="window.closeBookingModal ? window.closeBookingModal() : (document.getElementById('booking-modal').classList.add('hidden'))" class="mt-4 px-6 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js?v=solar-system-1.0"></script>
+</body>
+</html>
