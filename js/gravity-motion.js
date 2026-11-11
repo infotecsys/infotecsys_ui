@@ -639,6 +639,22 @@ export function initGravityMotion() {
     }
   });
 
+  let animationId = null;
+  let motionActive = isMotionEnabled();
+  let isPaused = !motionActive;
+  let isSleeping = false;
+  let idleFrames = 0;
+
+  function wakeEngine() {
+    if (isPaused || !motionActive) return;
+    idleFrames = 0;
+    if (isSleeping || !animationId) {
+      isSleeping = false;
+      if (animationId) cancelAnimationFrame(animationId);
+      animationId = requestAnimationFrame(animate);
+    }
+  }
+
   // Handle Scroll & Wheel Events
   function triggerMotion(deltaY) {
     if (!motionActive || isPaused) return;
@@ -650,6 +666,8 @@ export function initGravityMotion() {
     const magnitude = Math.min(32, Math.max(9, Math.abs(deltaY) * 0.28));
     physics.targetVelocityY = direction * magnitude;
     physics.direction = direction;
+
+    wakeEngine();
 
     // Reset back to idle drift after user stops scrolling (300ms window)
     physics.idleTimeout = setTimeout(() => {
@@ -676,6 +694,7 @@ export function initGravityMotion() {
   // Touch listener for mobile devices
   let touchStartY = 0;
   window.addEventListener('touchstart', (e) => {
+    wakeEngine();
     if (e.touches.length > 0) {
       touchStartY = e.touches[0].clientY;
     }
@@ -690,16 +709,12 @@ export function initGravityMotion() {
     }
   }, { passive: true });
 
-  // Animation Loop (60 FPS Hardware-Accelerated)
-  let animationId = null;
-  let motionActive = isMotionEnabled();
-  let isPaused = !motionActive;
-
   // Handle Interactive Motion Toggle (ON / OFF)
   window.addEventListener('infotecsys-motion-change', (e) => {
     motionActive = !!e.detail.enabled;
     if (!motionActive) {
       isPaused = true;
+      isSleeping = true;
       if (animationId) {
         cancelAnimationFrame(animationId);
         animationId = null;
@@ -710,16 +725,16 @@ export function initGravityMotion() {
       if (sunCanvas) sunCanvas.style.opacity = '0';
     } else {
       isPaused = false;
+      isSleeping = false;
       if (canvas) canvas.style.opacity = isLightMode ? '1' : '0.9';
       if (sunCanvas) sunCanvas.style.opacity = isLightMode ? '1' : '0';
       physics.lastScrollY = window.scrollY || window.pageYOffset || 0;
-      if (animationId) cancelAnimationFrame(animationId);
-      animationId = requestAnimationFrame(animate);
+      wakeEngine();
     }
   });
 
   function animate() {
-    if (isPaused || !motionActive) return;
+    if (isPaused || !motionActive || isSleeping) return;
 
     // Smooth physics damping (Spring-like interpolation)
     const baseTarget = physics.isScrolling ? physics.targetVelocityY : physics.idleDrift;
@@ -728,6 +743,18 @@ export function initGravityMotion() {
     // Smooth deceleration when scrolling
     if (physics.isScrolling) {
       physics.targetVelocityY *= 0.94;
+      idleFrames = 0;
+    } else if (Math.abs(physics.currentVelocityY - physics.idleDrift) < 0.05) {
+      idleFrames++;
+      // On mobile sleep after 2s of idle drift (120 frames); on desktop after 5s (300 frames)
+      const sleepThreshold = isMobile ? 120 : 300;
+      if (idleFrames > sleepThreshold) {
+        isSleeping = true;
+        animationId = null;
+        return;
+      }
+    } else {
+      idleFrames = 0;
     }
 
     // Clear Foreground Canvas

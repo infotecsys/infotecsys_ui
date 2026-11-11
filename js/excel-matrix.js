@@ -64,6 +64,22 @@ export function initExcelMatrix() {
   }
 
   // Add sheet button
+  
+  // Mobile View Tabs (Infotecsys Focus, vs Agency, vs SaaS, All)
+  const mobileTabs = container.querySelectorAll('.excel-view-tab');
+  mobileTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const viewMode = tab.getAttribute('data-view') || 'infotecsys';
+      container.setAttribute('data-mobile-view', viewMode);
+      mobileTabs.forEach(t => {
+        t.classList.remove('active');
+        t.classList.add('opacity-80');
+      });
+      tab.classList.add('active');
+      tab.classList.remove('opacity-80');
+    });
+  });
+
   if (addSheetBtn) {
     addSheetBtn.addEventListener('click', (e) => {
       e.stopPropagation();

@@ -1,5 +1,6 @@
 /**
  * Main Application Orchestrator for Infotecsys
+ * Lean, high-performance progressive engine with dynamic code-splitting
  */
 
 import { initTheme } from './theme.js';
@@ -10,14 +11,7 @@ import { initTilt } from './tilt.js';
 import { initHeroSwitcher } from './hero-switcher.js';
 import { initCursorEffects } from './cursor-effects.js';
 import { initGravityMotion } from './gravity-motion.js';
-import { initSolutionFinder } from './solution-finder.js';
-import { initDashboardPreview } from './dashboard-preview.js';
-import { initEstimator } from './estimator.js';
-import { initAIAssistant } from './ai-assistant.js';
 import { initBookingModal } from './booking-modal.js';
-import { initBlogSystem } from './blog-modal.js';
-import { initContactCard } from './contact-card.js';
-import { initExcelMatrix } from './excel-matrix.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 0. Initialize theme manager & motion controller first
@@ -33,19 +27,46 @@ document.addEventListener('DOMContentLoaded', () => {
   initGravityMotion();
   initBookingModal();
 
-  // 2. Progressive Tier: Initialize deep tools & showcases during main-thread idle time
+  // 2. Progressive Tier: Conditionally load deep tools & showcase modules on-demand
   const scheduleIdleTask = (typeof window.requestIdleCallback === 'function')
     ? (cb) => window.requestIdleCallback(cb, { timeout: 150 })
     : (cb) => setTimeout(cb, 20);
 
   scheduleIdleTask(() => {
-    initSolutionFinder();
-    initDashboardPreview();
-    initEstimator();
-    initAIAssistant();
-    initBlogSystem();
-    initContactCard();
-    initExcelMatrix();
+    // Dynamic import: Software Dashboards PPT Studio (73 KB)
+    if (document.getElementById('products-section') || document.getElementById('dashboard-preview-content')) {
+      import('./dashboard-preview.js').then(m => m.initDashboardPreview());
+    }
+
+    // Dynamic import: Interactive Solution Finder (16 KB)
+    if (document.getElementById('solution-finder-section') || document.getElementById('raycast-window')) {
+      import('./solution-finder.js').then(m => m.initSolutionFinder());
+    }
+
+    // Dynamic import: Excel Comparison Matrix (4 KB)
+    if (document.getElementById('excel-workbook-container')) {
+      import('./excel-matrix.js').then(m => m.initExcelMatrix());
+    }
+
+    // Dynamic import: Cost & Timeline Estimator (5 KB)
+    if (document.getElementById('cost-estimator-section') || document.getElementById('estimator-card')) {
+      import('./estimator.js').then(m => m.initEstimator());
+    }
+
+    // Dynamic import: AI Solutions Assistant (7 KB)
+    if (document.getElementById('ai-assistant-drawer')) {
+      import('./ai-assistant.js').then(m => m.initAIAssistant());
+    }
+
+    // Dynamic import: Blog Article Reader (16 KB)
+    if (document.getElementById('article-modal') || document.getElementById('blog-modal')) {
+      import('./blog-modal.js').then(m => m.initBlogSystem());
+    }
+
+    // Dynamic import: Contact Card & Form (8 KB)
+    if (document.getElementById('contact-section') || document.getElementById('contact-form')) {
+      import('./contact-card.js').then(m => m.initContactCard());
+    }
 
     // 3. Smooth animated numbers counter with IntersectionObserver
     initAnimatedCounters();

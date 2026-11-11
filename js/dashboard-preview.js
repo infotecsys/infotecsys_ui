@@ -154,14 +154,16 @@ const productDashboards = {
             </div>
 
             <!-- Student Live Attendance & Fee Roster Table -->
-            <div class="rounded-2xl border border-slate-800 overflow-hidden bg-slate-900/50">
-              <div class="px-4 py-3 bg-slate-950/80 border-b border-slate-800 flex items-center justify-between">
-                <span class="text-xs font-bold text-slate-200">Class 10-A &bull; Live Attendance & Fee Status</span>
-                <span class="text-xs text-cyan-400 font-mono">Synced 2m ago</span>
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-slate-50/70 dark:bg-slate-900/50">
+              <div class="px-4 py-3 bg-slate-100/90 dark:bg-slate-950/80 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                <span class="text-xs font-bold text-slate-900 dark:text-slate-200">Class 10-A &bull; Live Attendance &amp; Fee Status</span>
+                <span class="text-[11px] text-cyan-600 dark:text-cyan-400 font-mono">Synced 2m ago</span>
               </div>
-              <div class="overflow-x-auto">
-                <table class="w-full text-left text-xs">
-                  <thead class="bg-slate-950/60 text-slate-400 border-b border-slate-800">
+
+              <!-- Desktop Table View (>= sm: 640px) -->
+              <div class="hidden sm:block overflow-x-auto">
+                <table class="w-full text-left text-xs min-w-[560px]">
+                  <thead class="bg-slate-100 dark:bg-slate-950/60 text-slate-600 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800">
                     <tr>
                       <th class="p-3">Roll</th>
                       <th class="p-3">Student</th>
@@ -171,45 +173,108 @@ const productDashboards = {
                       <th class="p-3 text-right">Receipt</th>
                     </tr>
                   </thead>
-                  <tbody class="divide-y divide-slate-800/60">
-                    <tr class="hover:bg-slate-800/30 transition-colors">
-                      <td class="p-3 font-mono text-slate-400">#101</td>
-                      <td class="p-3 font-semibold text-white">Aarav Sharma</td>
-                      <td class="p-3 text-slate-300">08:14 AM (Gate 1)</td>
-                      <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-semibold">Present</span></td>
-                      <td class="p-3"><span class="text-emerald-400 font-medium">Paid (Term 2)</span></td>
+                  <tbody class="divide-y divide-slate-200 dark:divide-slate-800/60 whitespace-nowrap">
+                    <tr class="hover:bg-slate-100/50 dark:hover:bg-slate-800/30 transition-colors">
+                      <td class="p-3 font-mono text-slate-500 dark:text-slate-400">#101</td>
+                      <td class="p-3 font-semibold text-slate-900 dark:text-white">Aarav Sharma</td>
+                      <td class="p-3 text-slate-600 dark:text-slate-300">08:14 AM (Gate 1)</td>
+                      <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 font-semibold">Present</span></td>
+                      <td class="p-3"><span class="text-emerald-600 dark:text-emerald-400 font-medium">Paid (Term 2)</span></td>
                       <td class="p-3 text-right">
-                        <button onclick="window.triggerSimulatedAction('Receipt #8901 generated for Aarav Sharma')" class="px-2.5 py-1 rounded-lg bg-blue-600/30 hover:bg-blue-600 text-cyan-300 hover:text-white transition-colors">
+                        <button onclick="window.triggerSimulatedAction('Receipt #8901 generated for Aarav Sharma')" class="px-2.5 py-1 rounded-lg bg-blue-600/15 dark:bg-blue-600/30 hover:bg-blue-600 text-blue-600 dark:text-cyan-300 hover:text-white transition-colors">
                           View Receipt
                         </button>
                       </td>
                     </tr>
-                    <tr class="hover:bg-slate-800/30 transition-colors">
-                      <td class="p-3 font-mono text-slate-400">#102</td>
-                      <td class="p-3 font-semibold text-white">Ananya Deshmukh</td>
-                      <td class="p-3 text-slate-300">08:19 AM (Gate 2)</td>
-                      <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-semibold">Present</span></td>
-                      <td class="p-3"><span class="text-emerald-400 font-medium">Paid</span></td>
+                    <tr class="hover:bg-slate-100/50 dark:hover:bg-slate-800/30 transition-colors">
+                      <td class="p-3 font-mono text-slate-500 dark:text-slate-400">#102</td>
+                      <td class="p-3 font-semibold text-slate-900 dark:text-white">Ananya Deshmukh</td>
+                      <td class="p-3 text-slate-600 dark:text-slate-300">08:19 AM (Gate 2)</td>
+                      <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 font-semibold">Present</span></td>
+                      <td class="p-3"><span class="text-emerald-600 dark:text-emerald-400 font-medium">Paid</span></td>
                       <td class="p-3 text-right">
-                        <button onclick="window.triggerSimulatedAction('Receipt #8902 generated for Ananya Deshmukh')" class="px-2.5 py-1 rounded-lg bg-blue-600/30 hover:bg-blue-600 text-cyan-300 hover:text-white transition-colors">
+                        <button onclick="window.triggerSimulatedAction('Receipt #8902 generated for Ananya Deshmukh')" class="px-2.5 py-1 rounded-lg bg-blue-600/15 dark:bg-blue-600/30 hover:bg-blue-600 text-blue-600 dark:text-cyan-300 hover:text-white transition-colors">
                           View Receipt
                         </button>
                       </td>
                     </tr>
-                    <tr class="hover:bg-slate-800/30 transition-colors">
-                      <td class="p-3 font-mono text-slate-400">#103</td>
-                      <td class="p-3 font-semibold text-white">Rohan Patel</td>
-                      <td class="p-3 text-slate-500">—</td>
-                      <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-400 border border-rose-500/30 font-semibold">Absent</span></td>
-                      <td class="p-3"><span class="text-amber-400 font-medium">Due ($450)</span></td>
+                    <tr class="hover:bg-slate-100/50 dark:hover:bg-slate-800/30 transition-colors">
+                      <td class="p-3 font-mono text-slate-500 dark:text-slate-400">#103</td>
+                      <td class="p-3 font-semibold text-slate-900 dark:text-white">Rohan Patel</td>
+                      <td class="p-3 text-slate-400">—</td>
+                      <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/30 font-semibold">Absent</span></td>
+                      <td class="p-3"><span class="text-amber-600 dark:text-amber-400 font-medium">Due ($450)</span></td>
                       <td class="p-3 text-right">
-                        <button onclick="window.triggerSimulatedAction('WhatsApp fee reminder link sent to Rohan\'s Guardian')" class="px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-slate-950 transition-colors">
+                        <button onclick="window.triggerSimulatedAction('WhatsApp fee reminder link sent to Rohan\'s Guardian')" class="px-2.5 py-1 rounded-lg bg-amber-500/15 dark:bg-amber-500/20 hover:bg-amber-500 text-amber-600 dark:text-amber-300 hover:text-white transition-colors">
                           Send Reminder
                         </button>
                       </td>
                     </tr>
                   </tbody>
                 </table>
+              </div>
+
+              <!-- Mobile Responsive Record Cards (< sm: 640px) -->
+              <div class="sm:hidden divide-y divide-slate-200 dark:divide-slate-800/70 p-1">
+                <!-- Card 1 -->
+                <div class="p-3 space-y-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/20 rounded-xl transition-colors">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="font-mono text-xs font-bold text-cyan-600 dark:text-cyan-400">#101</span>
+                      <span class="font-bold text-slate-900 dark:text-white text-xs">Aarav Sharma</span>
+                    </div>
+                    <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 text-[10px] font-semibold">Present</span>
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-300">
+                    <span class="flex items-center gap-1 font-mono text-[10px]">🕒 08:14 AM &bull; Gate 1</span>
+                    <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Paid (Term 2)</span>
+                  </div>
+                  <div class="pt-0.5">
+                    <button onclick="window.triggerSimulatedAction('Receipt #8901 generated for Aarav Sharma')" class="w-full py-1.5 px-3 rounded-lg bg-blue-600/15 dark:bg-blue-600/25 hover:bg-blue-600 text-blue-600 dark:text-cyan-300 hover:text-white border border-blue-500/30 text-xs font-semibold transition-colors flex items-center justify-center gap-1.5">
+                      View Receipt ↗
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-3 space-y-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/20 rounded-xl transition-colors">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="font-mono text-xs font-bold text-cyan-600 dark:text-cyan-400">#102</span>
+                      <span class="font-bold text-slate-900 dark:text-white text-xs">Ananya Deshmukh</span>
+                    </div>
+                    <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 text-[10px] font-semibold">Present</span>
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-300">
+                    <span class="flex items-center gap-1 font-mono text-[10px]">🕒 08:19 AM &bull; Gate 2</span>
+                    <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Paid</span>
+                  </div>
+                  <div class="pt-0.5">
+                    <button onclick="window.triggerSimulatedAction('Receipt #8902 generated for Ananya Deshmukh')" class="w-full py-1.5 px-3 rounded-lg bg-blue-600/15 dark:bg-blue-600/25 hover:bg-blue-600 text-blue-600 dark:text-cyan-300 hover:text-white border border-blue-500/30 text-xs font-semibold transition-colors flex items-center justify-center gap-1.5">
+                      View Receipt ↗
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-3 space-y-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/20 rounded-xl transition-colors">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="font-mono text-xs font-bold text-cyan-600 dark:text-cyan-400">#103</span>
+                      <span class="font-bold text-slate-900 dark:text-white text-xs">Rohan Patel</span>
+                    </div>
+                    <span class="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/30 text-[10px] font-semibold">Absent</span>
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-300">
+                    <span class="flex items-center gap-1 font-mono text-[10px] text-slate-400">🕒 — No Gate Punch</span>
+                    <span class="text-amber-600 dark:text-amber-400 font-bold">Due ($450)</span>
+                  </div>
+                  <div class="pt-0.5">
+                    <button onclick="window.triggerSimulatedAction('WhatsApp fee reminder link sent to Rohan\'s Guardian')" class="w-full py-1.5 px-3 rounded-lg bg-amber-500/15 dark:bg-amber-500/20 hover:bg-amber-500 text-amber-600 dark:text-amber-300 hover:text-white border border-amber-500/30 text-xs font-semibold transition-colors flex items-center justify-center gap-1.5">
+                      Send Reminder ↗
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -312,14 +377,16 @@ const productDashboards = {
             </div>
 
             <!-- Live Patient Queue Table -->
-            <div class="rounded-2xl border border-slate-800 overflow-hidden bg-slate-900/50">
-              <div class="px-4 py-3 bg-slate-950/80 border-b border-slate-800 flex items-center justify-between">
-                <span class="text-xs font-bold text-slate-200">Live OPD Queue &bull; Dr. Vikram Mehra (Senior Cardiologist)</span>
-                <span class="text-xs text-emerald-400 font-mono">Token Dispenser Active</span>
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-slate-50/70 dark:bg-slate-900/50">
+              <div class="px-4 py-3 bg-slate-100/90 dark:bg-slate-950/80 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                <span class="text-xs font-bold text-slate-900 dark:text-slate-200">Live OPD Queue &bull; Dr. Vikram Mehra (Senior Cardiologist)</span>
+                <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-mono">Token Dispenser Active</span>
               </div>
-              <div class="overflow-x-auto">
-                <table class="w-full text-left text-xs">
-                  <thead class="bg-slate-950/60 text-slate-400 border-b border-slate-800">
+              
+              <!-- Desktop Table View (>= sm: 640px) -->
+              <div class="hidden sm:block overflow-x-auto">
+                <table class="w-full text-left text-xs min-w-[560px]">
+                  <thead class="bg-slate-100 dark:bg-slate-950/60 text-slate-600 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800">
                     <tr>
                       <th class="p-3">Token</th>
                       <th class="p-3">Patient Name</th>
@@ -329,25 +396,25 @@ const productDashboards = {
                       <th class="p-3 text-right">Action</th>
                     </tr>
                   </thead>
-                  <tbody class="divide-y divide-slate-800/60">
-                    <tr class="hover:bg-slate-800/30 transition-colors">
-                      <td class="p-3 font-mono font-bold text-emerald-400">#CR-12</td>
-                      <td class="p-3 font-semibold text-white">Sunita Verma</td>
-                      <td class="p-3 text-slate-300">54 Y / F</td>
-                      <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-400 border border-rose-500/30 font-semibold">Urgent ECG</span></td>
-                      <td class="p-3 text-slate-300">Star Health (Cashless Pre-Auth)</td>
+                  <tbody class="divide-y divide-slate-200 dark:divide-slate-800/60 whitespace-nowrap">
+                    <tr class="hover:bg-slate-100/50 dark:hover:bg-slate-800/30 transition-colors">
+                      <td class="p-3 font-mono font-bold text-emerald-600 dark:text-emerald-400">#CR-12</td>
+                      <td class="p-3 font-semibold text-slate-900 dark:text-white">Sunita Verma</td>
+                      <td class="p-3 text-slate-600 dark:text-slate-300">54 Y / F</td>
+                      <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/30 font-semibold">Urgent ECG</span></td>
+                      <td class="p-3 text-slate-600 dark:text-slate-300">Star Health (Cashless Pre-Auth)</td>
                       <td class="p-3 text-right">
                         <button onclick="window.triggerSimulatedAction('Consultation started with Sunita Verma')" class="px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition-colors">
                           Call Patient In
                         </button>
                       </td>
                     </tr>
-                    <tr class="hover:bg-slate-800/30 transition-colors">
-                      <td class="p-3 font-mono font-bold text-slate-300">#CR-13</td>
-                      <td class="p-3 font-semibold text-white">Rajesh Khanna</td>
-                      <td class="p-3 text-slate-300">42 Y / M</td>
-                      <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 font-semibold">Routine Check</span></td>
-                      <td class="p-3 text-slate-300">Self Pay</td>
+                    <tr class="hover:bg-slate-100/50 dark:hover:bg-slate-800/30 transition-colors">
+                      <td class="p-3 font-mono font-bold text-slate-500 dark:text-slate-300">#CR-13</td>
+                      <td class="p-3 font-semibold text-slate-900 dark:text-white">Rajesh Khanna</td>
+                      <td class="p-3 text-slate-600 dark:text-slate-300">42 Y / M</td>
+                      <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/30 font-semibold">Routine Check</span></td>
+                      <td class="p-3 text-slate-600 dark:text-slate-300">Self Pay</td>
                       <td class="p-3 text-right">
                         <button onclick="window.triggerSimulatedAction('SMS queue notification dispatched to Rajesh Khanna')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">
                           Queue (3m)
@@ -356,6 +423,47 @@ const productDashboards = {
                     </tr>
                   </tbody>
                 </table>
+              </div>
+
+              <!-- Mobile Responsive Record Cards (< sm: 640px) -->
+              <div class="sm:hidden divide-y divide-slate-200 dark:divide-slate-800/70 p-1">
+                <div class="p-3 space-y-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/20 rounded-xl transition-colors">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400">#CR-12</span>
+                      <span class="font-bold text-slate-900 dark:text-white text-xs">Sunita Verma</span>
+                    </div>
+                    <span class="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/30 text-[10px] font-semibold">Urgent ECG</span>
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-300">
+                    <span>54 Y &bull; Female</span>
+                    <span class="text-blue-600 dark:text-blue-400 font-mono text-[10px]">Star Health Pre-Auth</span>
+                  </div>
+                  <div class="pt-0.5">
+                    <button onclick="window.triggerSimulatedAction('Consultation started with Sunita Verma')" class="w-full py-1.5 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-colors shadow-sm">
+                      Call Patient In ↗
+                    </button>
+                  </div>
+                </div>
+
+                <div class="p-3 space-y-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/20 rounded-xl transition-colors">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="font-mono text-xs font-bold text-slate-500 dark:text-slate-400">#CR-13</span>
+                      <span class="font-bold text-slate-900 dark:text-white text-xs">Rajesh Khanna</span>
+                    </div>
+                    <span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/30 text-[10px] font-semibold">Routine Check</span>
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-300">
+                    <span>42 Y &bull; Male</span>
+                    <span class="text-slate-500 dark:text-slate-400 font-mono text-[10px]">Self Pay</span>
+                  </div>
+                  <div class="pt-0.5">
+                    <button onclick="window.triggerSimulatedAction('SMS queue notification dispatched to Rajesh Khanna')" class="w-full py-1.5 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors">
+                      Queue (3m) ↗
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -432,14 +540,16 @@ const productDashboards = {
           </div>
 
           <!-- Station Status Table -->
-          <div class="rounded-2xl border border-slate-800 overflow-hidden bg-slate-900/50">
-            <div class="px-4 py-3 bg-slate-950/80 border-b border-slate-800 flex items-center justify-between">
-              <span class="text-xs font-bold text-slate-200">Live Stylist Station Status &bull; 02:45 PM</span>
-              <span class="text-xs text-pink-400 font-mono">Real-Time Sync</span>
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-slate-50/70 dark:bg-slate-900/50">
+            <div class="px-4 py-3 bg-slate-100/90 dark:bg-slate-950/80 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-900 dark:text-slate-200">Live Stylist Station Status &bull; 02:45 PM</span>
+              <span class="text-[11px] text-pink-600 dark:text-pink-400 font-mono">Real-Time Sync</span>
             </div>
-            <div class="overflow-x-auto">
-              <table class="w-full text-left text-xs">
-                <thead class="bg-slate-950/60 text-slate-400 border-b border-slate-800">
+
+            <!-- Desktop Table View (>= sm: 640px) -->
+            <div class="hidden sm:block overflow-x-auto">
+              <table class="w-full text-left text-xs min-w-[560px]">
+                <thead class="bg-slate-100 dark:bg-slate-950/60 text-slate-600 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800">
                   <tr>
                     <th class="p-3">Chair</th>
                     <th class="p-3">Senior Stylist</th>
@@ -449,25 +559,25 @@ const productDashboards = {
                     <th class="p-3 text-right">POS Action</th>
                   </tr>
                 </thead>
-                <tbody class="divide-y divide-slate-800/60">
-                  <tr class="hover:bg-slate-800/30 transition-colors">
-                    <td class="p-3 font-mono font-bold text-pink-400">CHAIR-01</td>
-                    <td class="p-3 font-semibold text-white">Elena Rostova</td>
-                    <td class="p-3 text-slate-300">Pooja Kapoor (VIP Gold)</td>
-                    <td class="p-3 text-cyan-300">Balayage + Olaplex Treatment</td>
-                    <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-semibold">In Progress (85m)</span></td>
+                <tbody class="divide-y divide-slate-200 dark:divide-slate-800/60 whitespace-nowrap">
+                  <tr class="hover:bg-slate-100/50 dark:hover:bg-slate-800/30 transition-colors">
+                    <td class="p-3 font-mono font-bold text-pink-600 dark:text-pink-400">CHAIR-01</td>
+                    <td class="p-3 font-semibold text-slate-900 dark:text-white">Elena Rostova</td>
+                    <td class="p-3 text-slate-600 dark:text-slate-300">Pooja Kapoor (VIP Gold)</td>
+                    <td class="p-3 text-cyan-600 dark:text-cyan-300">Balayage + Olaplex Treatment</td>
+                    <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 font-semibold">In Progress (85m)</span></td>
                     <td class="p-3 text-right">
-                      <button onclick="window.triggerSimulatedAction('Invoice draft #POS-449 prepared: $280.00')" class="px-2.5 py-1 rounded-lg bg-pink-600/30 hover:bg-pink-600 text-pink-200 hover:text-white transition-colors">
+                      <button onclick="window.triggerSimulatedAction('Invoice draft #POS-449 prepared: $280.00')" class="px-2.5 py-1 rounded-lg bg-pink-600/20 dark:bg-pink-600/30 hover:bg-pink-600 text-pink-600 dark:text-pink-200 hover:text-white transition-colors">
                         Quick Checkout
                       </button>
                     </td>
                   </tr>
-                  <tr class="hover:bg-slate-800/30 transition-colors">
-                    <td class="p-3 font-mono font-bold text-slate-400">CHAIR-02</td>
-                    <td class="p-3 font-semibold text-white">Marcus Vance</td>
-                    <td class="p-3 text-slate-300">Karan Singhania</td>
-                    <td class="p-3 text-cyan-300">Beard Sculpt + Head Massage</td>
-                    <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 font-semibold">Just Begun</span></td>
+                  <tr class="hover:bg-slate-100/50 dark:hover:bg-slate-800/30 transition-colors">
+                    <td class="p-3 font-mono font-bold text-slate-500 dark:text-slate-400">CHAIR-02</td>
+                    <td class="p-3 font-semibold text-slate-900 dark:text-white">Marcus Vance</td>
+                    <td class="p-3 text-slate-600 dark:text-slate-300">Karan Singhania</td>
+                    <td class="p-3 text-cyan-600 dark:text-cyan-300">Beard Sculpt + Head Massage</td>
+                    <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/30 font-semibold">Just Begun</span></td>
                     <td class="p-3 text-right">
                       <button onclick="window.triggerSimulatedAction('Kérastase retail oil added to Karan\'s bill')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">
                         Add Product
@@ -476,6 +586,47 @@ const productDashboards = {
                   </tr>
                 </tbody>
               </table>
+            </div>
+
+            <!-- Mobile Responsive Record Cards (< sm: 640px) -->
+            <div class="sm:hidden divide-y divide-slate-200 dark:divide-slate-800/70 p-1">
+              <div class="p-3 space-y-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/20 rounded-xl transition-colors">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs font-bold text-pink-600 dark:text-pink-400">CHAIR-01</span>
+                    <span class="font-bold text-slate-900 dark:text-white text-xs">Elena Rostova</span>
+                  </div>
+                  <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 text-[10px] font-semibold">In Progress (85m)</span>
+                </div>
+                <div class="flex flex-col gap-0.5 text-[11px] text-slate-600 dark:text-slate-300">
+                  <div class="font-semibold text-slate-800 dark:text-slate-200">Pooja Kapoor &bull; <span class="text-amber-500">VIP Gold</span></div>
+                  <div class="text-[10px] text-cyan-600 dark:text-cyan-400">Balayage + Olaplex Treatment</div>
+                </div>
+                <div class="pt-0.5">
+                  <button onclick="window.triggerSimulatedAction('Invoice draft #POS-449 prepared: $280.00')" class="w-full py-1.5 px-3 rounded-lg bg-pink-600/20 dark:bg-pink-600/30 hover:bg-pink-600 text-pink-600 dark:text-pink-200 hover:text-white border border-pink-500/30 text-xs font-semibold transition-colors">
+                    Quick Checkout ↗
+                  </button>
+                </div>
+              </div>
+
+              <div class="p-3 space-y-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/20 rounded-xl transition-colors">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs font-bold text-slate-500 dark:text-slate-400">CHAIR-02</span>
+                    <span class="font-bold text-slate-900 dark:text-white text-xs">Marcus Vance</span>
+                  </div>
+                  <span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/30 text-[10px] font-semibold">Just Begun</span>
+                </div>
+                <div class="flex flex-col gap-0.5 text-[11px] text-slate-600 dark:text-slate-300">
+                  <div class="font-semibold text-slate-800 dark:text-slate-200">Karan Singhania</div>
+                  <div class="text-[10px] text-cyan-600 dark:text-cyan-400">Beard Sculpt + Head Massage</div>
+                </div>
+                <div class="pt-0.5">
+                  <button onclick="window.triggerSimulatedAction('Kérastase retail oil added to Karan\'s bill')" class="w-full py-1.5 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors">
+                    Add Product ↗
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -550,14 +701,16 @@ const productDashboards = {
           </div>
 
           <!-- Live Invoicing Ledger -->
-          <div class="rounded-2xl border border-slate-800 overflow-hidden bg-slate-900/50">
-            <div class="px-4 py-3 bg-slate-950/80 border-b border-slate-800 flex items-center justify-between">
-              <span class="text-xs font-bold text-slate-200">Live B2B Invoices & IRN Generation</span>
-              <span class="text-xs text-cyan-400 font-mono">NIC E-Invoicing Connected</span>
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-slate-50/70 dark:bg-slate-900/50">
+            <div class="px-4 py-3 bg-slate-100/90 dark:bg-slate-950/80 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-900 dark:text-slate-200">Live B2B Invoices &amp; IRN Generation</span>
+              <span class="text-[11px] text-cyan-600 dark:text-cyan-400 font-mono">NIC E-Invoicing Connected</span>
             </div>
-            <div class="overflow-x-auto">
-              <table class="w-full text-left text-xs">
-                <thead class="bg-slate-950/60 text-slate-400 border-b border-slate-800">
+
+            <!-- Desktop Table View (>= sm: 640px) -->
+            <div class="hidden sm:block overflow-x-auto">
+              <table class="w-full text-left text-xs min-w-[580px]">
+                <thead class="bg-slate-100 dark:bg-slate-950/60 text-slate-600 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800">
                   <tr>
                     <th class="p-3">Invoice #</th>
                     <th class="p-3">Customer / Firm</th>
@@ -567,25 +720,25 @@ const productDashboards = {
                     <th class="p-3 text-right">Action</th>
                   </tr>
                 </thead>
-                <tbody class="divide-y divide-slate-800/60">
-                  <tr class="hover:bg-slate-800/30 transition-colors">
-                    <td class="p-3 font-mono font-bold text-cyan-400">#INV-2026-891</td>
-                    <td class="p-3 font-semibold text-white">TechnoForge Engineering Ltd</td>
-                    <td class="p-3 font-mono text-slate-400">27AAACT8923Q1Z2</td>
-                    <td class="p-3 text-emerald-400 font-bold">$12,450.00</td>
-                    <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-semibold">IRN Generated</span></td>
+                <tbody class="divide-y divide-slate-200 dark:divide-slate-800/60 whitespace-nowrap">
+                  <tr class="hover:bg-slate-100/50 dark:hover:bg-slate-800/30 transition-colors">
+                    <td class="p-3 font-mono font-bold text-cyan-600 dark:text-cyan-400">#INV-2026-891</td>
+                    <td class="p-3 font-semibold text-slate-900 dark:text-white">TechnoForge Engineering Ltd</td>
+                    <td class="p-3 font-mono text-slate-500 dark:text-slate-400">27AAACT8923Q1Z2</td>
+                    <td class="p-3 text-emerald-600 dark:text-emerald-400 font-bold">$12,450.00</td>
+                    <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 font-semibold">IRN Generated</span></td>
                     <td class="p-3 text-right">
-                      <button onclick="window.triggerSimulatedAction('E-Way Bill PDF & QR downloaded for INV-891')" class="px-2.5 py-1 rounded-lg bg-cyan-600/30 hover:bg-cyan-600 text-cyan-200 hover:text-white transition-colors">
+                      <button onclick="window.triggerSimulatedAction('E-Way Bill PDF & QR downloaded for INV-891')" class="px-2.5 py-1 rounded-lg bg-cyan-600/20 dark:bg-cyan-600/30 hover:bg-cyan-600 text-cyan-700 dark:text-cyan-200 hover:text-white transition-colors">
                         Print E-Way
                       </button>
                     </td>
                   </tr>
-                  <tr class="hover:bg-slate-800/30 transition-colors">
-                    <td class="p-3 font-mono font-bold text-slate-300">#INV-2026-892</td>
-                    <td class="p-3 font-semibold text-white">Horizon Electricals & Spares</td>
-                    <td class="p-3 font-mono text-slate-400">24BBBPX1124M1Z9</td>
-                    <td class="p-3 text-emerald-400 font-bold">$4,820.00</td>
-                    <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 font-semibold">Dispatched</span></td>
+                  <tr class="hover:bg-slate-100/50 dark:hover:bg-slate-800/30 transition-colors">
+                    <td class="p-3 font-mono font-bold text-slate-500 dark:text-slate-300">#INV-2026-892</td>
+                    <td class="p-3 font-semibold text-slate-900 dark:text-white">Horizon Electricals & Spares</td>
+                    <td class="p-3 font-mono text-slate-500 dark:text-slate-400">24BBBPX1124M1Z9</td>
+                    <td class="p-3 text-emerald-600 dark:text-emerald-400 font-bold">$4,820.00</td>
+                    <td class="p-3"><span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/30 font-semibold">Dispatched</span></td>
                     <td class="p-3 text-right">
                       <button onclick="window.triggerSimulatedAction('Invoice WhatsApp PDF sent to Horizon Electricals')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">
                         Share PDF
@@ -594,6 +747,47 @@ const productDashboards = {
                   </tr>
                 </tbody>
               </table>
+            </div>
+
+            <!-- Mobile Responsive Record Cards (< sm: 640px) -->
+            <div class="sm:hidden divide-y divide-slate-200 dark:divide-slate-800/70 p-1">
+              <div class="p-3 space-y-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/20 rounded-xl transition-colors">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs font-bold text-cyan-600 dark:text-cyan-400">#INV-891</span>
+                    <span class="font-bold text-slate-900 dark:text-white text-xs truncate max-w-[190px]">TechnoForge Eng. Ltd</span>
+                  </div>
+                  <span class="text-emerald-600 dark:text-emerald-400 font-bold text-xs">$12,450</span>
+                </div>
+                <div class="flex items-center justify-between text-[11px]">
+                  <span class="font-mono text-[10px] text-slate-500 dark:text-slate-400">GST: 27AAACT8923Q1Z2</span>
+                  <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 text-[10px] font-semibold">IRN Generated</span>
+                </div>
+                <div class="pt-0.5">
+                  <button onclick="window.triggerSimulatedAction('E-Way Bill PDF & QR downloaded for INV-891')" class="w-full py-1.5 px-3 rounded-lg bg-cyan-600/20 dark:bg-cyan-600/30 hover:bg-cyan-600 text-cyan-700 dark:text-cyan-200 hover:text-white border border-cyan-500/30 text-xs font-semibold transition-colors">
+                    Print E-Way ↗
+                  </button>
+                </div>
+              </div>
+
+              <div class="p-3 space-y-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/20 rounded-xl transition-colors">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs font-bold text-slate-500 dark:text-slate-400">#INV-892</span>
+                    <span class="font-bold text-slate-900 dark:text-white text-xs truncate max-w-[190px]">Horizon Electricals</span>
+                  </div>
+                  <span class="text-emerald-600 dark:text-emerald-400 font-bold text-xs">$4,820</span>
+                </div>
+                <div class="flex items-center justify-between text-[11px]">
+                  <span class="font-mono text-[10px] text-slate-500 dark:text-slate-400">GST: 24BBBPX1124M1Z9</span>
+                  <span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/30 text-[10px] font-semibold">Dispatched</span>
+                </div>
+                <div class="pt-0.5">
+                  <button onclick="window.triggerSimulatedAction('Invoice WhatsApp PDF sent to Horizon Electricals')" class="w-full py-1.5 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors">
+                    Share PDF ↗
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -774,7 +968,7 @@ export function initDashboardPreview() {
         slideCounterEl.textContent = `Slide ${currentSlideIndex + 1} of ${productKeys.length}`;
       }
       if (slideCounterBottomEl) {
-        slideCounterBottomEl.textContent = `Slide ${currentSlideIndex + 1} / ${productKeys.length} • 100% Zoom`;
+        slideCounterBottomEl.textContent = `Slide ${currentSlideIndex + 1} / ${productKeys.length}`;
       }
       if (breadcrumbEl) {
         breadcrumbEl.textContent = `SLIDE 0${currentSlideIndex + 1} OF 05 // ${data.category.toUpperCase()}`;

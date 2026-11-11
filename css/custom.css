@@ -10,8 +10,38 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
   font-family: 'Plus Jakarta Sans', sans-serif;
   color-scheme: dark;
+}
+
+section[id],
+.ppt-workspace,
+.git-pipeline-workspace,
+.excel-workbook-container,
+.raycast-window,
+#hero,
+#products-section,
+#services-section,
+#solution-finder-section,
+#cost-estimator-section,
+#architecture-section,
+#testimonials-section,
+#faq-section,
+#trust-section,
+#contact-section {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Below-the-fold DOM layout & style containment */
+#cost-estimator-section,
+#architecture-section,
+#testimonials-section,
+#faq-section,
+#trust-section,
+#contact-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
 }
 
 body {
@@ -225,10 +255,29 @@ html.light .click-particle {
 
 /* Glassmorphism */
 .glass-nav {
-  background: rgba(6, 10, 20, 0.88);
+  background: rgba(6, 10, 20, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 768px) {
+  .glass-nav {
+    background: rgba(6, 10, 20, 0.98) !important;
+  }
+}
+
+html.light .glass-nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+@media (max-width: 768px) {
+  html.light .glass-nav {
+    background: rgba(255, 255, 255, 0.98) !important;
+  }
 }
 
 .glass-card {
@@ -3765,6 +3814,202 @@ html.light #close-article-modal:hover {
   border: 1px solid rgba(110, 231, 183, 0.2);
   padding: 3px 10px;
   border-radius: 6px;
+}
+
+/* ========================================================
+   RAYCAST SOLUTION FINDER MOBILE RESPONSIVE ENHANCEMENTS
+======================================================== */
+@media (max-width: 640px) {
+  .raycast-window {
+    border-radius: 1.25rem !important;
+  }
+  .raycast-tab {
+    padding: 8px 10px !important;
+    font-size: 11px !important;
+  }
+  .raycast-titlebar {
+    padding: 10px 14px !important;
+  }
+  .raycast-status-pill {
+    padding: 2px 8px !important;
+    font-size: 9.5px !important;
+  }
+}
+
+/* ========================================================
+   EXCEL MATRIX MOBILE RESPONSIVE ENHANCEMENTS
+   Provides seamless freeze panes, mobile view tabs, and
+   unrestricted Infotecsys Advantage visibility on mobile viewports.
+======================================================== */
+.excel-mobile-toolbar {
+  background: #070c1a;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.excel-view-tab {
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.excel-view-tab:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.excel-view-tab.active {
+  background: rgba(16, 124, 65, 0.25) !important;
+  color: #4ade80 !important;
+  border: 1px solid rgba(74, 222, 128, 0.45) !important;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
+}
+
+html.light .excel-mobile-toolbar {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light .excel-view-tab {
+  background: #ffffff !important;
+  color: #64748b !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light .excel-view-tab:hover {
+  color: #0f172a !important;
+  background: #f1f5f9 !important;
+}
+
+html.light .excel-view-tab.active {
+  background: #ecfdf5 !important;
+  color: #047857 !important;
+  border-color: #10b981 !important;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.15) !important;
+}
+
+@media (max-width: 767px) {
+  /* Infotecsys Focus Mode: Hide Columns B and C */
+  .excel-workbook-container[data-mobile-view="infotecsys"] [data-col="B"],
+  .excel-workbook-container[data-mobile-view="infotecsys"] [data-col="C"] {
+    display: none !important;
+  }
+
+  /* vs Agency Mode: Hide Column C */
+  .excel-workbook-container[data-mobile-view="agency"] [data-col="C"] {
+    display: none !important;
+  }
+
+  /* vs SaaS Mode: Hide Column B */
+  .excel-workbook-container[data-mobile-view="saas"] [data-col="B"] {
+    display: none !important;
+  }
+
+  /* Freeze Panes for All View / Horizontal Scroll */
+  .excel-workbook-container[data-mobile-view="all"] .excel-corner-cell,
+  .excel-workbook-container[data-mobile-view="all"] .excel-row-num {
+    position: sticky;
+    left: 0;
+    z-index: 25;
+    background: #0e172e;
+  }
+  .excel-workbook-container[data-mobile-view="all"] .excel-col-th[data-col="A"] {
+    position: sticky;
+    left: 28px;
+    z-index: 20;
+    background: #0e172e;
+    box-shadow: 3px 0 8px -2px rgba(0, 0, 0, 0.45);
+  }
+  .excel-workbook-container[data-mobile-view="all"] .excel-cell-factor {
+    position: sticky;
+    left: 28px;
+    z-index: 20;
+    background: #080e22;
+    box-shadow: 3px 0 8px -2px rgba(0, 0, 0, 0.45);
+  }
+  
+  html.light .excel-workbook-container[data-mobile-view="all"] .excel-corner-cell,
+  html.light .excel-workbook-container[data-mobile-view="all"] .excel-row-num {
+    background: #f1f5f9 !important;
+  }
+  html.light .excel-workbook-container[data-mobile-view="all"] .excel-col-th[data-col="A"] {
+    background: #f1f5f9 !important;
+    box-shadow: 3px 0 8px -2px rgba(0, 0, 0, 0.1);
+  }
+  html.light .excel-workbook-container[data-mobile-view="all"] .excel-cell-factor {
+    background: #ffffff !important;
+    box-shadow: 3px 0 8px -2px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Universal compact padding on mobile */
+  .excel-sheet-table .excel-cell,
+  .excel-sheet-table .excel-col-th {
+    padding: 9px 5px !important;
+  }
+  .excel-sheet-table .excel-corner-cell,
+  .excel-sheet-table .excel-row-num {
+    width: 26px !important;
+    min-width: 26px !important;
+    padding: 8px 2px !important;
+    font-size: 10px !important;
+  }
+
+  /* Infotecsys focus mode: 2 columns fit 100% */
+  .excel-workbook-container[data-mobile-view="infotecsys"] .excel-sheet-table {
+    width: 100% !important;
+    table-layout: fixed !important;
+  }
+  .excel-workbook-container[data-mobile-view="infotecsys"] [data-col="A"],
+  .excel-workbook-container[data-mobile-view="infotecsys"] [data-col="D"] {
+    width: 48% !important;
+    font-size: 11px !important;
+  }
+
+  /* vs Agency / vs SaaS mode: 3 columns fit cleanly without cut-off */
+  .excel-workbook-container[data-mobile-view="agency"] .excel-sheet-table,
+  .excel-workbook-container[data-mobile-view="saas"] .excel-sheet-table {
+    width: 100% !important;
+    table-layout: fixed !important;
+  }
+  .excel-workbook-container[data-mobile-view="agency"] [data-col="A"],
+  .excel-workbook-container[data-mobile-view="saas"] [data-col="A"] {
+    width: 35% !important;
+    font-size: 10px !important;
+  }
+  .excel-workbook-container[data-mobile-view="agency"] [data-col="B"],
+  .excel-workbook-container[data-mobile-view="saas"] [data-col="C"] {
+    width: 32% !important;
+    font-size: 10px !important;
+  }
+  .excel-workbook-container[data-mobile-view="agency"] [data-col="D"],
+  .excel-workbook-container[data-mobile-view="saas"] [data-col="D"] {
+    width: 33% !important;
+    font-size: 10px !important;
+  }
+
+  /* Mobile pill text wrapping & sizing */
+  .excel-pill-positive,
+  .excel-pill-negative,
+  .excel-pill-neutral,
+  .excel-pill-softgreen {
+    padding: 3px 5px !important;
+    font-size: 10px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    line-height: 1.25 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .excel-mobile-toolbar {
+    display: none !important;
+  }
+  .excel-workbook-container [data-col="A"],
+  .excel-workbook-container [data-col="B"],
+  .excel-workbook-container [data-col="C"],
+  .excel-workbook-container [data-col="D"] {
+    display: table-cell !important;
+  }
 }
 
 /* Status Bar Footer */
