@@ -325,6 +325,8 @@ html.light .click-particle {
 
 /* Gradient Text Shimmer */
 .text-shimmer {
+  display: inline-block;
+  vertical-align: baseline;
   background: linear-gradient(
     90deg, 
     #ffffff 0%, 
@@ -338,6 +340,11 @@ html.light .click-particle {
   -webkit-background-clip: text;
   background-clip: text;
   animation: shimmer 6s linear infinite;
+  will-change: background-position;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* Glow Borders */
@@ -7014,6 +7021,46 @@ html.light #footer .text-slate-500 {
   }
 }
 
+/* ========================================================
+   MOBILE HERO STABILITY & ZERO-SHIVER COMPOSITOR ISOLATION
+   Prevents text shimmering / glyph vibration on mobile screens
+   by isolating foreground typography onto dedicated GPU layers
+======================================================== */
+.mobile-hero-scrim {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+#hero h1 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+#hero p,
+#hero-quick-pills {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+#hero-solar-sun-container {
+  contain: paint layout;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
 @media (max-width: 1023px) {
   /* Subtle hero mobile scrim for text legibility over solar/planetary flares */
   .mobile-hero-scrim {
@@ -7025,6 +7072,38 @@ html.light #footer .text-slate-500 {
   }
   html.light .mobile-hero-scrim {
     background: radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.5) 60%, transparent 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  /* On mobile touch devices, eliminate continuous background-position thrashing that vibrates adjacent text */
+  .text-shimmer {
+    animation: none !important;
+    background: linear-gradient(90deg, #67e8f9 0%, #93c5fd 50%, #c4b5fd 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+  
+  html.light .text-shimmer {
+    background: linear-gradient(90deg, #1d4ed8 0%, #0284c7 50%, #4f46e5 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  /* Optimize solar sun on mobile to avoid GPU fill rate choking */
+  .solar-photosphere-sphere {
+    animation: none !important;
+    box-shadow: 0 0 35px 8px rgba(245, 158, 11, 0.65), 0 0 60px 15px rgba(234, 88, 12, 0.35), inset 0 0 25px rgba(255, 255, 255, 0.9) !important;
+  }
+  
+  .solar-granulation-layer {
+    animation-duration: 30s !important;
+  }
+
+  .solar-corona-outer {
+    filter: blur(40px) !important;
   }
 }
 

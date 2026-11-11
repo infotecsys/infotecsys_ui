@@ -12,8 +12,8 @@ export function initParticleCanvas(canvasId = 'hero-canvas') {
   let height = (canvas.height = canvas.parentElement.offsetHeight);
 
   const isMobile = window.innerWidth < 768;
-  const particleCount = isMobile ? 35 : 75;
-  const maxDistance = isMobile ? 80 : 120;
+  const particleCount = isMobile ? 22 : 75;
+  const maxDistance = isMobile ? 70 : 120;
   const mouseRadius = 130;
 
   const mouse = {
@@ -69,6 +69,12 @@ export function initParticleCanvas(canvasId = 'hero-canvas') {
   }
 
   function connectParticles() {
+    if (particles.length === 0) return;
+
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgba(59, 130, 246, 0.16)';
+    ctx.lineWidth = 0.8;
+
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const dx = particles[i].x - particles[j].x;
@@ -76,31 +82,28 @@ export function initParticleCanvas(canvasId = 'hero-canvas') {
         const dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < maxDistance) {
-          const alpha = (1 - dist / maxDistance) * 0.25;
-          ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(59, 130, 246, ${alpha})`;
-          ctx.lineWidth = 0.8;
-          ctx.stroke();
         }
       }
+    }
+    ctx.stroke();
 
-      // Connect to mouse
-      if (mouse.x !== null && mouse.y !== null) {
+    // Connect to mouse (desktop pointer only)
+    if (mouse.x !== null && mouse.y !== null) {
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgba(6, 182, 212, 0.3)';
+      ctx.lineWidth = 1;
+      for (let i = 0; i < particles.length; i++) {
         const dx = particles[i].x - mouse.x;
         const dy = particles[i].y - mouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < mouseRadius) {
-          const alpha = (1 - dist / mouseRadius) * 0.35;
-          ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = `rgba(6, 182, 212, ${alpha})`;
-          ctx.lineWidth = 1;
-          ctx.stroke();
         }
       }
+      ctx.stroke();
     }
   }
 
