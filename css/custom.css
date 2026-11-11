@@ -7138,6 +7138,32 @@ html.light #footer .text-slate-500 {
   }
 }
 
+/* ========================================================
+   ENTERPRISE CSS CONTAINMENT & GPU COMPOSITOR ISOLATION
+   Enables isolated subtrees for cards, preventing local
+   hovers/interactions from invalidating the whole document
+======================================================== */
+.glass-card,
+.vscode-editor-window,
+.bento-card,
+.portfolio-card,
+.vscode-pillar-card,
+.executive-inquiry-card,
+.visiting-card-wrap,
+.case-study-card {
+  contain: layout style;
+}
+
+#hero-mock-title,
+#hero-mock-badge,
+#hero-mock-status,
+#hero-chart-path,
+#hero-chart-fill {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
 
 
 

@@ -8,10 +8,15 @@ export function initNav() {
   const mobileDrawerBackdrop = document.getElementById('mobile-drawer-backdrop');
   const closeMobileDrawer = document.getElementById('close-mobile-drawer');
 
-  // Sticky header blur on scroll
+  // Sticky header blur on scroll with state latch to eliminate redundant DOM class mutations
+  let isScrolled = null;
   function updateHeaderOnScroll() {
     if (!header) return;
-    if (window.scrollY > 20) {
+    const shouldBeScrolled = window.scrollY > 20;
+    if (shouldBeScrolled === isScrolled) return;
+    isScrolled = shouldBeScrolled;
+
+    if (isScrolled) {
       header.classList.add('glass-nav', 'py-3.5', 'shadow-2xl', 'shadow-slate-950/50');
       header.classList.remove('py-5', 'bg-transparent');
     } else {

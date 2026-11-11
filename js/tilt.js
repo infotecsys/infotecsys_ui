@@ -14,21 +14,30 @@ export function initTilt() {
     el.style.transformStyle = 'preserve-3d';
     el.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
 
-    el.addEventListener('mousemove', (e) => {
-      const rect = el.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+    let cachedRect = null;
 
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
+    el.addEventListener('mouseenter', () => {
+      cachedRect = el.getBoundingClientRect();
+    }, { passive: true });
+
+    el.addEventListener('mousemove', (e) => {
+      if (!cachedRect) {
+        cachedRect = el.getBoundingClientRect();
+      }
+      const x = e.clientX - cachedRect.left;
+      const y = e.clientY - cachedRect.top;
+
+      const centerX = cachedRect.width / 2;
+      const centerY = cachedRect.height / 2;
 
       const rotateX = ((y - centerY) / centerY) * -maxTilt;
       const rotateY = ((x - centerX) / centerX) * maxTilt;
 
       el.style.transform = `perspective(${perspective}) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.01, 1.01, 1.01)`;
-    });
+    }, { passive: true });
 
     el.addEventListener('mouseleave', () => {
+      cachedRect = null;
       el.style.transform = `perspective(${perspective}) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
     });
   });

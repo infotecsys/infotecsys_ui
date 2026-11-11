@@ -24,32 +24,38 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initMotionController();
 
-  // 1. Initialize core visual, physics & navigation modules
+  // 1. Initialize core visual, physics & navigation modules (Critical Tier)
   initParticleCanvas('hero-canvas');
   initNav();
   initTilt();
   initHeroSwitcher();
   initCursorEffects();
   initGravityMotion();
-
-  // 2. Initialize interactive tools & product showcases
-  initSolutionFinder();
-  initDashboardPreview();
-  initEstimator();
-  initAIAssistant();
   initBookingModal();
-  initBlogSystem();
-  initContactCard();
-  initExcelMatrix();
 
-  // 3. Smooth animated numbers counter with IntersectionObserver
-  initAnimatedCounters();
+  // 2. Progressive Tier: Initialize deep tools & showcases during main-thread idle time
+  const scheduleIdleTask = (typeof window.requestIdleCallback === 'function')
+    ? (cb) => window.requestIdleCallback(cb, { timeout: 150 })
+    : (cb) => setTimeout(cb, 20);
 
-  // 4. Portfolio category filter
-  initPortfolioFilters();
+  scheduleIdleTask(() => {
+    initSolutionFinder();
+    initDashboardPreview();
+    initEstimator();
+    initAIAssistant();
+    initBlogSystem();
+    initContactCard();
+    initExcelMatrix();
 
-  // 5. Accordion FAQs
-  initFaqAccordions();
+    // 3. Smooth animated numbers counter with IntersectionObserver
+    initAnimatedCounters();
+
+    // 4. Portfolio category filter
+    initPortfolioFilters();
+
+    // 5. Accordion FAQs
+    initFaqAccordions();
+  });
 });
 
 function initAnimatedCounters() {
