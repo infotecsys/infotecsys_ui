@@ -7352,13 +7352,33 @@ html.light #footer .text-slate-500 {
 }
 
 @media (max-width: 768px) {
+  /* Mobile Android & phone stabilization: zero 3D text trembling */
+  .mobile-hero-scrim {
+    transform: none !important;
+    -webkit-transform: none !important;
+    isolation: isolate;
+  }
+
+  #hero h1,
+  #hero p,
+  #hero-quick-pills {
+    transform: none !important;
+    -webkit-transform: none !important;
+    text-rendering: optimizeLegibility !important;
+  }
+
   /* On mobile touch devices, eliminate continuous background-position thrashing that vibrates adjacent text */
   .text-shimmer {
+    display: inline !important;
     animation: none !important;
+    background-size: 100% 100% !important;
     background: linear-gradient(90deg, #67e8f9 0%, #93c5fd 50%, #c4b5fd 100%) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    will-change: auto !important;
   }
   
   html.light .text-shimmer {
@@ -7366,6 +7386,9 @@ html.light #footer .text-slate-500 {
     -webkit-background-clip: text !important;
     background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    will-change: auto !important;
   }
 
   /* Optimize solar sun on mobile to avoid GPU fill rate choking */
